@@ -73,6 +73,8 @@ body {
 
     &:focus {
       border-color: dodgerblue;
+      // remove default focus outline
+      outline: 0;
     }
 
     &:not(:placeholder-shown):focus:invalid {
