@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Transparent form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="form form--transparent form--size">
+        <h1>Login</h1>
+
+        <input
+          type="email"
+          class="form__input"
+          name=""
+          id="username"
+          required
+          placeholder=" "
+        />
+        <label for="username" class="form__label">Username</label>
+
+        <input
+          type="password"
+          class="form__input"
+          name=""
+          id="password"
+          required
+          placeholder=" "
+          minlength="6"
+        />
+        <label for="password" class="form__label">Password</label>
+
+        <input type="submit" class="form__submit" value="Submit" />
+
+        <p>by Rudi Boshoff</p>
+      </form>
+    </div>
+  </body>
+</html>

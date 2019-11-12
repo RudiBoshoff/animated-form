@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/frozen-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  padding: 50px 40px;
+  border-radius: 5px;
+
+  &--transparent {
+    background-color: rgba(#000, 0.7);
+  }
+
+  h1,
+  p {
+    padding: 10px 0 30px;
+    color: white;
+    text-align: center;
+  }
+
+  &__input {
+    width: 500px;
+    height: 20px;
+    padding: 20px 0px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    margin-top: 50px;
+    font-size: 20px;
+
+    &:required {
+      // remove default error box
+      box-shadow: none;
+    }
+
+    &:valid {
+      border-color: springgreen;
+    }
+
+    &:focus + .form__label,
+    &:valid + .form__label {
+      transform: scale(0.8) translateY(-40px);
+    }
+
+    &:focus + .form__label {
+      color: dodgerblue;
+    }
+
+    &:valid + .form__label {
+      color: springgreen;
+    }
+
+    &:focus {
+      border-color: dodgerblue;
+    }
+
+    &:not(:placeholder-shown):focus:invalid {
+      // while entering data in field and in focus
+      border-color: yellow;
+
+      & + .form__label {
+        color: yellow;
+      }
+    }
+
+    &:invalid:not(:focus):not(:placeholder-shown) {
+      // invalid and not in focus
+      border-color: red;
+
+      & + .form__label {
+        transform: scale(0.8) translateY(-40px);
+        color: red;
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    color: white;
+    position: relative;
+    width: 30px;
+    top: -30px;
+    transition: all 0.5s;
+    font-size: 20px;
+    pointer-events: none;
+  }
+
+  &__submit {
+    margin: 50px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    font-size: 18px;
+
+    &:hover {
+      background-color: rgb(70, 162, 255);
+      cursor: pointer;
+    }
+
+    &::-moz-focus-inner {
+      // remove default mozilla focus outline
+      border: 0;
+    }
+
+    &:focus {
+      // remove default focus outline
+      outline: none;
+      box-shadow: 0px 0px 0px 1px white;
+    }
+  }
+}

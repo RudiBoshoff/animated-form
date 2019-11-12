@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/frozen-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  padding: 50px 40px;
+  border-radius: 5px;
+}
+
+.form--transparent {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.form h1,
+.form p {
+  padding: 10px 0 30px;
+  color: white;
+  text-align: center;
+}
+
+.form__input {
+  width: 500px;
+  height: 20px;
+  padding: 20px 0px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.form__input:required {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form__input:valid {
+  border-color: springgreen;
+}
+
+.form__input:focus + .form__label,
+.form__input:valid + .form__label {
+  -webkit-transform: scale(0.8) translateY(-40px);
+          transform: scale(0.8) translateY(-40px);
+}
+
+.form__input:focus + .form__label {
+  color: dodgerblue;
+}
+
+.form__input:valid + .form__label {
+  color: springgreen;
+}
+
+.form__input:focus {
+  border-color: dodgerblue;
+}
+
+.form__input:not(:placeholder-shown):focus:invalid {
+  border-color: yellow;
+}
+
+.form__input:not(:placeholder-shown):focus:invalid + .form__label {
+  color: yellow;
+}
+
+.form__input:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: red;
+}
+
+.form__input:invalid:not(:focus):not(:placeholder-shown) + .form__label {
+  -webkit-transform: scale(0.8) translateY(-40px);
+          transform: scale(0.8) translateY(-40px);
+  color: red;
+}
+
+.form__label {
+  display: block;
+  color: white;
+  position: relative;
+  width: 30px;
+  top: -30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+.form__submit {
+  margin: 50px 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+  background-color: dodgerblue;
+  border: none;
+  font-size: 18px;
+}
+
+.form__submit:hover {
+  background-color: #46a2ff;
+  cursor: pointer;
+}
+
+.form__submit::-moz-focus-inner {
+  border: 0;
+}
+
+.form__submit:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 0px 1px white;
+          box-shadow: 0px 0px 0px 1px white;
+}
+/*# sourceMappingURL=style.css.map */
